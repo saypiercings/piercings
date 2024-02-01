@@ -32,52 +32,23 @@
             color: #333;
         }
 
-        form {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 20px;
+        .bio {
+            text-align: justify;
+            margin-bottom: 20px;
         }
 
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #333;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 10px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        button {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #555;
-        }
-
-        .options {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            grid-gap: 10px;
-        }
-
-        .option {
+        .gallery {
             display: flex;
-            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-between;
         }
 
-        .option input {
-            margin-right: 5px;
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -89,48 +60,26 @@
     </header>
 
     <section>
-        <h2>Κλείστε το ραντεβού σας τώρα!</h2>
-        <p>Συμπληρώστε τη φόρμα παρακάτω για να κλείσετε το ραντεβού σας για ένα piercing. Κάθε piercing κοστίζει 10 ευρώ.</p>
+        <h2>Συναντήστε τον Επαγγελματία Τρυπητή Αλέξανδρο</h2>
 
-        <form action="/submit" method="post">
-            <label for="name">Ονοματεπώνυμο:</label>
-            <input type="text" id="name" name="name" required>
+        <div class="bio">
+            <p>Ο Αλέξανδρος, γνωστός ως Αλέξ, είναι ένας πραγματικός επαγγελματίας του τρυπήματος με περισσότερα από 8 χρόνια
+                εμπειρίας. Με πάθος για την τέχνη του, έχει αποκτήσει εκτενείς γνώσεις και εξειδίκευση στον χώρο.</p>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <p>Ο Αλέξ θεωρεί κάθε τρύπημα ως μια ευκαιρία να δημιουργήσει μια μοναδική έκφραση και να προσφέρει στους πελάτες του
+                μια θετική εμπειρία. Η επαγγελματική του προσέγγιση και η ευαισθησία του στην υγιεινή διασφαλίζουν όχι μόνο το
+                εντυπωσιακό αισθητικό αποτέλεσμα αλλά και την ασφάλεια των πελατών.</p>
+        </div>
 
-            <label for="phone">Τηλέφωνο:</label>
-            <input type="tel" id="phone" name="phone" required>
+        <h2>Συλλογή Εργασιών</h2>
 
-            <label for="piercingType">Είδος Piercing:</label>
-            <select id="piercingType" name="piercingType" required>
-                <option value="ear">Αυτί</option>
-                <option value="nose">Μύτη</option>
-                <option value="navel">Ομφαλός</option>
-                <option value="lip">Χείλος</option>
-                <option value="eyebrow">Φρύδι</option>
-                <option value="tongue">Γλώσσα</option>
-                <!-- Add more options as needed -->
-            </select>
-
-            <label for="date">Ημερομηνία και Ώρα:</label>
-            <input type="datetime-local" id="date" name="date" required>
-
-            <label>Επιλέξτε προσθέτες επιλογές:</label>
-            <div class="options">
-                <div class="option">
-                    <input type="checkbox" id="cleaning" name="cleaning">
-                    <label for="cleaning">Καθαρισμός (+5€)</label>
-                </div>
-                <div class="option">
-                    <input type="checkbox" id="numbing" name="numbing">
-                    <label for="numbing">Τοπική αναισθησία (+8€)</label>
-                </div>
-                <!-- Add more options as needed -->
-            </div>
-
-            <button type="submit">Κλείστε Ραντεβού</button>
-        </form>
+        <div class="gallery">
+            <!-- Add images here -->
+            <img src="piercing1.jpg" alt="Piercing Example 1">
+            <img src="piercing2.jpg" alt="Piercing Example 2">
+            <img src="piercing3.jpg" alt="Piercing Example 3">
+            <!-- Add more images as needed -->
+        </div>
     </section>
 
 </body>
