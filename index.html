@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Καλωσήρθατε στο Piercing Studio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        h1, h2, p {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Καλωσήρθατε στο Piercing Studio</h1>
+    </header>
+
+    <section>
+        <h2>Κλείστε το ραντεβού σας τώρα!</h2>
+        <p>Συμπληρώστε τη φόρμα παρακάτω για να κλείσετε το ραντεβού σας για ένα piercing.</p>
+
+        <form action="/submit" method="post">
+            <label for="name">Ονοματεπώνυμο:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Τηλέφωνο:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="piercingType">Είδος Piercing:</label>
+            <select id="piercingType" name="piercingType" required>
+                <option value="ear">Αυτί</option>
+                <option value="nose">Μύτη</option>
+                <option value="navel">Ομφαλός</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <label for="date">Ημερομηνία και Ώρα:</label>
+            <input type="datetime-local" id="date" name="date" required>
+
+            <button type="submit">Κλείστε Ραντεβού</button>
+        </form>
+    </section>
+
+</body>
+
+</html>
