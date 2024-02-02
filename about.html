@@ -24,26 +24,6 @@
       color: #333;
     }
 
-    .categories {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: space-around;
-      background-color: #ddd;
-      padding: 10px;
-      border-radius: 5px;
-      margin-bottom: 20px;
-    }
-
-    .category {
-      font-size: 1.2em;
-      font-weight: bold;
-      color: #555;
-      margin-top: 10px;
-      cursor: pointer;
-    }
-
     p {
       color: #666;
       padding: 10px;
@@ -68,19 +48,6 @@
     <h1>ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ</h1>
   </header>
 
-  <ul class="categories">
-    <li class="category">Αρχική Σελίδα</li>
-    <li class="category">Τρυπήματα</li>
-    <li class="category">Διαχείριση Ιστοσελίδας</li>
-    <li class="category">Ασφάλεια</li>
-  </ul>
-
-  <div class="category">Ομάδα Εργασίας:</div>
-  <ul>
-    <li class="category">ΣΕΙ</li>
-    <li class="category">ΑΛΕΞΑΝΔΡΟΣ</li>
-  </ul>
-
   <p class="p1">Στον συναρπαστικό κόσμο των τρυπημάτων, συναντάμε δύο εξαιρετικούς επαγγελματίες που συνεργάζονται για να δημιουργήσουν μια μοναδική εμπειρία για τους πελάτες μας. Με χρόνια εμπειρίας και αφοσίωση στον χώρο, ο Σέι και ο Αλέξανδρος αποτελούν τον πυρήνα μιας μικρής επιχείρησης που αφοσιώνεται στην τέχνη των τρυπημάτων και την ασφάλεια των πελατών. Υπάρχει επίσης ένας ειδικά διαμορφωμένος χώρος για τα τρυπήματα, δημιουργώντας ένα άνετο και ασφαλές περιβάλλον.</p>
 
   <p class="p2">Ο Σέι, με περίσσεια εμπειρία 8 ετών στον χώρο των τρυπημάτων, έχει εξελιχθεί σε έναν πραγματικό καλλιτέχνη. Η τεχνική του και η εμπειρία του δημιουργούν ένα ασφαλές και ευχάριστο περιβάλλον για τους πελάτες μας. Ανεξαρτήτως του τύπου του τρυπήματος που επιλέγετε, ο Σέι θα σας παρέχει εξαιρετική εξυπηρέτηση και τελειοποιημένο αποτέλεσμα.</p>
@@ -95,15 +62,6 @@
     paragraphs.forEach((p, index) => {
       p.addEventListener('click', () => {
         p.classList.toggle(`p${index % 4 + 1}-clicked`);
-      });
-    });
-
-    // Handle category clicks
-    const categories = document.querySelectorAll('.category');
-    categories.forEach(category => {
-      category.addEventListener('click', () => {
-        // You can redirect to the corresponding section or page here
-        alert(`Clicked on category: ${category.innerText}`);
       });
     });
   </script>
